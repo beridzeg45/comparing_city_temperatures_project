@@ -42,8 +42,8 @@ def get_temp_graph(city_list):
 
     cmap = ['deepskyblue', 'orange','red','grey','olive','purple','aqua','lavender','pink','lawngreen']
 
-    fig,ax=plt.subplots(figsize=(5,3))
-    df.plot.line(ax=ax,marker='o',figsize=(10,7),color=cmap[:len(city_list)])
+    fig,ax=plt.subplots(figsize=(7,5))
+    df.plot.line(ax=ax,marker='o',color=cmap[:len(city_list)])
     ax.set_xticks(range(len(df.index)),df.index)
     ax.set_title('Average Monthly Temperatures By City',fontweight='bold')
     ax.set_ylabel('°C')

@@ -42,7 +42,6 @@ def get_temp_graph(city_list):
             city_df = city_df.rename(city)
             df = pd.concat([df, city_df], axis=1)
             
-    cmap=plt.cm.get_cmap('tab10', len(city_list))
     fig,ax=plt.subplots(figsize=(10,5))
     df.plot.line(ax=ax,marker='o',color=cmap[:len(city_list)],fontsize=8)
     ax.set_xticks(range(len(df.index)),df.index)
@@ -90,7 +89,6 @@ def get_world_graph(city_list):
 
             lats.append(city_coordinates[city]['Lat']), lons.append(city_coordinates[city]['Lon']), cities.append(city)
 
-    cmap=plt.cm.get_cmap('tab10', len(city_list))
     fig,ax=plt.subplots(figsize=(10,10))
     world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.6)
     ax.scatter(x=lons,y=lats,s=100,c=cmap[:len(cities)])

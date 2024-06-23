@@ -19,7 +19,8 @@ city_coordinates=pickle.load(open('city_coordinates.pickle','rb'))
 world=geopandas.read_file(r"world-administrative-boundaries (detailed)/world-administrative-boundaries.shp")
 
 default_city_list=['Tbilisi (Georgia)','Munich (Germany)', 'Wellington (New Zealand)', 'Santiago (Chile)', 'Miami (Florida)']
-cmap = ['deepskyblue', 'orange','red','olive','purple','aqua','lavender','pink','lawngreen','grey']
+#cmap = ['deepskyblue', 'orange','red','olive','purple','aqua','lavender','pink','lawngreen','grey']
+cmap=plt.cm.get_cmap('tab10', len(city_list))
 
 
 

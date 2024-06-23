@@ -86,7 +86,9 @@ def get_world_graph(city_list):
             city_df = city_df.rename(city)
             df = pd.concat([df, city_df], axis=1)
 
-            lats.append(city_coordinates[city]['Lat']), lons.append(city_coordinates[city]['Lon']), cities.append(city)
+            lats.append(city_coordinates[city]['Lat'])
+            lons.append(city_coordinates[city]['Lon'])
+            cities.append(city)
 
     fig,ax=plt.subplots(figsize=(10,10))
     world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.6)

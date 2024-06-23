@@ -41,7 +41,7 @@ def get_temp_graph(city_list):
             city_df = city_df.rename(city)
             df = pd.concat([df, city_df], axis=1)
             
-    fig,ax=plt.subplots(figsize=(10,5))
+    fig,ax=plt.subplots(figsize=(7,4))
     df.plot.line(ax=ax,marker='o',color=cmap[:len(city_list)], fontsize=8)
     ax.set_xticks(range(len(df.index)),df.index)
     ax.set_title('Average Monthly Temperatures By City',fontweight='bold')
@@ -90,7 +90,7 @@ def get_world_graph(city_list):
             lons.append(city_coordinates[city]['Lon'])
             cities.append(city)
 
-    fig,ax=plt.subplots(figsize=(15,15))
+    fig,ax=plt.subplots(figsize=(10,10))
     world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.6)
     ax.scatter(x=lons,y=lats,s=100,c=cmap[:len(cities)])
     for i in range(len(cities)):

@@ -18,7 +18,8 @@ all_cities=pickle.load(open('all_cities.pickle','rb'))
 city_coordinates=pickle.load(open('city_coordinates.pickle','rb'))
 world=geopandas.read_file(r"world-administrative-boundaries (detailed)/world-administrative-boundaries.shp")
 
-default_city_list=['Tbilisi (Georgia)','Munich (Germany)', 'Wellington (New Zealand)']
+default_city_list=['Tbilisi (Georgia)','Munich (Germany)', 'Wellington (New Zealand)', 'Santiago (Chile', 'Miami (Florida)']
+ cmap = ['deepskyblue', 'orange','red','olive','purple','aqua','lavender','pink','lawngreen','grey']
 
 
 
@@ -39,8 +40,6 @@ def get_temp_graph(city_list):
             city_df=(city_df-32)*5/9 #convert F to C
             city_df = city_df.rename(city)
             df = pd.concat([df, city_df], axis=1)
-
-    cmap = ['deepskyblue', 'orange','red','grey','olive','purple','aqua','lavender','pink','lawngreen']
 
     fig,ax=plt.subplots(figsize=(10,5))
     df.plot.line(ax=ax,marker='o',color=cmap[:len(city_list)],fontsize=8)
@@ -89,7 +88,6 @@ def get_world_graph(city_list):
 
             lats.append(city_coordinates[city]['Lat']), lons.append(city_coordinates[city]['Lon']), cities.append(city)
 
-    cmap = ['deepskyblue', 'orange','red','grey','olive','purple','aqua','lavender','pink','lawngreen']
 
     fig,ax=plt.subplots(figsize=(10,10))
     world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.6)

@@ -16,7 +16,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 
 all_cities=pickle.load(open('all_cities.pickle','rb'))
 city_coordinates=pickle.load(open('city_coordinates.pickle','rb'))
-world=geopandas.read_file("world-administrative-boundaries (detailed)\world-administrative-boundaries.shp")
+world=geopandas.read_file(r"world-administrative-boundaries (detailed)/world-administrative-boundaries.shp")
 
 default_city_list=['Tbilisi (Georgia)', 'Tallinn (Estonia)','Munich (Germany)']
 

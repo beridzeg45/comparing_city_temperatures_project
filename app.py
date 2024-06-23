@@ -20,7 +20,6 @@ world=geopandas.read_file(r"world-administrative-boundaries (detailed)/world-adm
 
 default_city_list=['Tbilisi (Georgia)', 'Munich (Germany)', 'Wellington (New Zealand)', 'Santiago (Chile)', 'Miami (Florida)']
 #cmap = ['deepskyblue', 'orange','red','olive','purple','aqua','lavender','pink','lawngreen','grey']
-cmap=plt.cm.get_cmap('tab10', len(city_list))
 
 
 
@@ -43,7 +42,7 @@ def get_temp_graph(city_list):
             df = pd.concat([df, city_df], axis=1)
             
     fig,ax=plt.subplots(figsize=(10,5))
-    df.plot.line(ax=ax,marker='o',color=cmap[:len(city_list)],fontsize=8)
+    df.plot.line(ax=ax,marker='o',color=cmap=plt.cm.get_cmap('tab10', len(city_list))[:len(city_list)], fontsize=8)
     ax.set_xticks(range(len(df.index)),df.index)
     ax.set_title('Average Monthly Temperatures By City',fontweight='bold')
     ax.set_ylabel('°C')
@@ -91,7 +90,7 @@ def get_world_graph(city_list):
 
     fig,ax=plt.subplots(figsize=(10,10))
     world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.6)
-    ax.scatter(x=lons,y=lats,s=100,c=cmap[:len(cities)])
+    ax.scatter(x=lons,y=lats,s=100,c=cmap=plt.cm.get_cmap('tab10', len(city_list))[:len(cities)])
     for i in range(len(cities)):
         ax.text(lons[i], lats[i],cities[i].split('(')[0].strip(),fontweight='bold',size=6)
     ax.axis('off')

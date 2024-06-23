@@ -95,7 +95,7 @@ def get_world_graph(city_list):
     world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.6)
     ax.scatter(x=lons,y=lats,s=100,c=cmap[:len(cities)])
     for i in range(len(cities)):
-        ax.set_text(lons[i], lats[i],cities[i].split('(')[0].strip(),fontweight='bold',size=6)
+        ax.text(lons[i], lats[i],cities[i].split('(')[0].strip(),fontweight='bold',size=6)
     ax.axis('off')
 
     return fig

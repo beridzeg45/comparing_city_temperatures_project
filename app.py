@@ -91,7 +91,7 @@ def get_world_graph(city_list):
 
     cmap = ['deepskyblue', 'orange','red','grey','olive','purple','aqua','lavender','pink','lawngreen']
 
-    fig,ax=plt.subplots(figsize=(20,20))
+    fig,ax=plt.subplots(figsize=(7,7))
     world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.6)
     ax.scatter(x=lons,y=lats,s=100,c=cmap[:len(cities)])
     for i in range(len(cities)):

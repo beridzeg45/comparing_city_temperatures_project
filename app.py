@@ -54,7 +54,7 @@ def get_temp_graph(city_list):
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
-    ax.legend(city_list, fontsize=6, framealpha=0.5)
+    ax.legend(city_list, fontsize=8, framealpha=0)
 
     return fig
 

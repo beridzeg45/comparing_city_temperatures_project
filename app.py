@@ -93,7 +93,7 @@ def get_world_graph(city_list):
     ax.set_facecolor(plot_color)
     fig.patch.set_facecolor(plot_color)
 
-    world.plot(ax=ax, color=plot_color, ec='black', lw=0.1, alpha=1.0)
+    world.plot(ax=ax, color=plot_color, ec='white', lw=0.1, alpha=1.0)
 
   
     

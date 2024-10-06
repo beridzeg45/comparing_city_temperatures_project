@@ -90,7 +90,7 @@ def get_world_graph(city_list):
     fig.patch.set_facecolor(plot_color)
     world.plot(ax=ax, color=plot_color, ec='white', lw=0.1, alpha=1.0)
     #ax.scatter(x=[coord['Lon'] for city, coord in city_coordinates.items()],y=[coord['Lat'] for city, coord in city_coordinates.items()],s=0.1,c=[coord['Lat'] if coord['Lat'] is not None and coord['Lat'] >= 0 else -1 * coord['Lat'] if coord['Lat'] is not None else 0 for city, coord in city_coordinates.items()],alpha=1.0,cmap='hot_r')
-    ax.scatter(x=lons,y=lats,s=50,c=[cmap[i] for i in len(cities)])
+    ax.scatter(x=lons,y=lats,s=50,c=cmap[len(city_list)])
     #for i in range(len(cities)):
     #    ax.text(lons[i],lats[i],cities[i],fontweight='bold',color='white',s=6)
     plot_color=(14/255, 17/255, 23/255)

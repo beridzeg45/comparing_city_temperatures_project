@@ -101,6 +101,7 @@ def get_world_graph(city_list):
     s=0.1,
     c=[coord['Lat'] if coord['Lat'] is not None and coord['Lat'] >= 0 else -1 * coord['Lat'] if coord['Lat'] is not None else 0 for city, coord in city_coordinates.items()],
     alpha=1.0  # Ensure full opacity
+    cmap='hot_r'
 )
     ax.axis('off')
       

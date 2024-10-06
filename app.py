@@ -50,6 +50,11 @@ def get_temp_graph(city_list):
     ax.set_title('Average Monthly Temperatures By City',fontweight='bold',color='White')
     ax.set_ylabel('°C',color='White')
     ax.grid(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.legend(city_list, fontsize=6, framealpha=0.5)
 
     return fig
 

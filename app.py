@@ -71,7 +71,7 @@ def default_world_map():
     plot_color=(14/255, 17/255, 23/255)
     ax.set_facecolor(plot_color)
     fig.patch.set_facecolor(plot_color) 
-    world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.5)
+    world.plot(ax=ax, color='black', ec='black', lw=0.1, alpha=1.0)
     ax.scatter(x=[coord['Lon'] for city,coord in city_coordinates.items()],
             y=[coord['Lat'] for city,coord in city_coordinates.items()],
             s=0.2,

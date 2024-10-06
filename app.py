@@ -109,11 +109,10 @@ def get_world_graph(city_list):
 
     world.plot(ax=ax, color=plot_color, ec='black', lw=0.1, alpha=1.0)
 
-    ax.scatter(
-        x=[coord['Lon'] for city, coord in city_coordinates.items()],
-        y=[coord['Lat'] for city, coord in city_coordinates.items()],
-        s=0.2,
-    )
+    ax.scatter(x=[coord['Lon'] for city,coord in city_coordinates.items()],
+            y=[coord['Lat'] for city,coord in city_coordinates.items()],
+            s=0.2,
+            c=[coord['Lat'] if coord['Lat'] is not None and coord['Lat']>=0 else -1*coord['Lat']  if coord['Lat'] is not None else 0 for city,coord in city_coordinates.items()],cmap='hot_r')
     
     ax.axis('off')
 

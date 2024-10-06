@@ -89,7 +89,7 @@ def get_world_graph(city_list):
     ax.set_facecolor(plot_color)
     fig.patch.set_facecolor(plot_color)
     world.plot(ax=ax, color=plot_color, ec='white', lw=0.1, alpha=1.0)
-    ax.scatter(x=lons,y=lats,s=10,c=cmap[:len(city_list)])
+    ax.scatter(x=lons,y=lats,s=30,c=cmap[:len(city_list)])
     #for i in range(len(cities)):
     #    ax.text(lons[i],lats[i],cities[i],fontweight='bold',color='white',s=6)
     plot_color=(14/255, 17/255, 23/255)

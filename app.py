@@ -49,7 +49,6 @@ def get_temp_graph(city_list):
     ax.set_xticks(range(len(df.index)),df.index,color='White')
     ax.set_title('Average Monthly Temperatures By City',fontweight='bold',color='White')
     ax.set_ylabel('°C',color='White')
-    ax.set_yticklabels(df.values, color='White')
     ax.grid(False)
 
     return fig

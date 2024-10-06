@@ -68,6 +68,9 @@ def get_temp_graph(city_list):
 
 def default_world_map():
     fig,ax=plt.subplots(figsize=(7,7))
+    plot_color=(14/255, 17/255, 23/255)
+    ax.set_facecolor(plot_color)
+    fig.patch.set_facecolor(plot_color) 
     world.plot(ax=ax,color='lightgrey',ec='black',lw=.1,alpha=0.5)
     ax.scatter(x=[coord['Lon'] for city,coord in city_coordinates.items()],
             y=[coord['Lat'] for city,coord in city_coordinates.items()],

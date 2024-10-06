@@ -67,10 +67,6 @@ def get_temp_graph(city_list):
 
 
 
-
-
-
-
 def get_world_graph(city_list):
 
     lats,lons,cities=[],[],[]
@@ -97,6 +93,7 @@ def get_world_graph(city_list):
         y=[coord['Lat'] for city,coord in city_coordinates.items()],
         s=0.2,
         c=cmap[:len(city_list)]
+              )
     plot_color=(14/255, 17/255, 23/255)
     ax.set_facecolor(plot_color)
     fig.patch.set_facecolor(plot_color) 

@@ -92,7 +92,7 @@ def get_world_graph(city_list):
     ax.scatter(x=[coord['Lon'] for city,coord in city_coordinates.items()],
         y=[coord['Lat'] for city,coord in city_coordinates.items()],
         s=0.2,
-        c=cmap[:len(city_list)]
+        color=cmap[:len(city_list)]
               )
     plot_color=(14/255, 17/255, 23/255)
     ax.set_facecolor(plot_color)
